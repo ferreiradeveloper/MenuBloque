@@ -1,0 +1,101 @@
+html {
+    font-size: 65.5%;
+    font-family: 'Lato',sans-serif;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* estilos generales */
+h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    transition: all .3s ease-in;    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+
+/* header */
+header.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: tomato;
+}
+
+header.site-header .logo {
+    margin-left: 2rem;
+}
+
+nav ul.lista-menu {
+    display: flex;
+    position: relative;
+
+}
+
+ul.lista-menu li {
+    padding: 4rem;
+    margin: 0 4rem;
+}
+
+ul.lista-menu li:last-child {
+    margin-right: 0;
+}
+
+ul.lista-menu li:hover {
+    background-color: black;    
+}
+
+ul.lista-menu li:hover a.enlace-padre {
+    color: white;
+}
+
+/* submenus */
+ul.lista-submenu {
+    display: none;
+    position: absolute;
+    top: 10.4rem;
+    left: 4rem;
+    background-color: tomato;
+}
+
+ul.lista-submenu li {
+    margin: 0 1rem;
+}
+
+ul.lista-submenu li:first-child {
+    margin-left: 0;
+}
+
+ul.lista-submenu li a.enlace-hijo {
+   font-size: 1.5rem; 
+   letter-spacing: .1rem;
+   color: white;
+}
+
+ul.lista-menu li:hover ul.lista-submenu {
+    display: flex;
+}
+
+li:nth-of-type(2n) ul.lista-submenu {
+    left: 25.6rem;
+}
+
+li:nth-of-type(3n) ul.lista-submenu {
+    left: 49.7rem;
+}
